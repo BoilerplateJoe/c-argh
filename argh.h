@@ -56,7 +56,7 @@
 #define ARGH_VAL()                                                                                          \
     /* assert can only be used with ARGH_FLAG */                                                            \
     ((argh_name == NULL)                                                                                    \
-     ? (fprintf(stderr, "fatal: ARGH_VAL can only be used with ARGH_FLAG\n", argh_name), exit(1), NULL)     \
+     ? (fprintf(stderr, "fatal: ARGH_VAL can only be used with ARGH_FLAG\n"), exit(1), NULL)     \
      /* if argh_diff, use suffix of current argv instead of next argv */                                    \
      : (argh_diff                                                                                           \
        ? (argv[argh_offset] + argh_diff)                                                                    \
